@@ -25,6 +25,10 @@ public class RpcServer {
 
     private ServiceInvoker serviceInvoker;
 
+    public RpcServer() {
+
+    }
+
     public RpcServer(ServerConfig config) {
         this.serverConfig = config;
         this.transportServer = ReflectionUtils.newInstance(config.getTransprotServerClass());

@@ -17,8 +17,6 @@ public class ServiceManagerTest {
     @Before
     public void init() {
         sm = new ServiceManager();
-        TestInterface bean = new TestInterfaceImpl();
-        sm.register(TestInterface.class, bean);
     }
 
 
@@ -30,6 +28,7 @@ public class ServiceManagerTest {
 
     @Test
     public void lookup() {
+        register();
         Method[] methods = ReflectionUtils.getPublicMethods(TestInterface.class);
         for (Method method: methods) {
             ServiceDescriptor serviceDescriptor = ServiceDescriptor.from(TestInterface.class, method);

@@ -14,7 +14,7 @@ public class ServerConfig {
 
     private Class<? extends Encoder> encoderClass = JsonEncoder.class;
 
-    private Class<? extends Decoder> dncoderClass = JsonDecoder.class;
+    private Class<? extends Decoder> decoderClass = JsonDecoder.class;
 
     private int prot = 3000;
 

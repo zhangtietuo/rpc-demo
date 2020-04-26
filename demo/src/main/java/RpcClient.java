@@ -10,5 +10,6 @@ public class RpcClient {
         CalService calService = client.getProxy(CalService.class);
         int r1 = calService.add(1, 2);
         int r2 = calService.minus(2, 1);
+        System.out.println(r1);
     }
 }

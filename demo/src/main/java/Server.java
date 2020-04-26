@@ -6,7 +6,7 @@
 public class Server {
 
     public static void main(String[] args) {
-        RpcServer rpcServer = new RpcServer();
+        RpcServer rpcServer = new RpcServer(new ServerConfig());
         rpcServer.register(CalService.class, new CalServiceImpl());
         rpcServer.start();
     }
